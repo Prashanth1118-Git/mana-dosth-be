@@ -55,7 +55,7 @@ def ask_question(q: Question):
     # API వెర్షన్ v1beta అని నిర్ధారించుకోండి.
     # మోడల్ పేరును 'gemini-pro' నుండి 'gemini-1.0-pro'కి మార్చబడింది.
     # మోడల్ పేరును తిరిగి 'gemini-1.0-pro'కి సరిచేయబడింది.
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key={GEMINI_API_KEY}"
     print(f"DEBUG: Calling URL: {url}") # డీబగ్గింగ్ కోసం: కాల్ చేస్తున్న URLని ప్రింట్ చేయండి
     
     # అభ్యర్థన హెడర్‌లు
