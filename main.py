@@ -5,7 +5,7 @@
 # import os
 
 # # TEMP: Hardcoded API key for local testing
-# openai.api_key = "Jma4FpgT3BlbkFJdQzBLVnDw9uVX1r1-OCqGREjQ78982v84cliq_LZ1vIcejhVvGO7AEtIgmAH3HSd8cWNw11h4A"
+
 
 # app = FastAPI()
 
