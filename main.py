@@ -51,14 +51,9 @@ def ask_question(q: Question):
         print(f"DEBUG: Using API Key (full): {GEMINI_API_KEY}") # కీ చాలా చిన్నదైతే మొత్తం ప్రింట్ చేయండి
 
     # జెమిని API ఎండ్‌పాయింట్ URL
-    # మోడల్ పేరు 'gemini-pro' మరియు మీ API కీని URL పారామీటర్‌గా ఉపయోగిస్తుంది.
-    # API వెర్షన్ v1beta అని నిర్ధారించుకోండి.
-    # మోడల్ పేరును 'gemini-pro' నుండి 'gemini-1.0-pro'కి మార్చబడింది.
-    # మోడల్ పేరును తిరిగి 'gemini-1.0-pro'కి సరిచేయబడింది.
-    # అందుబాటులో ఉన్న మోడల్‌ల జాబితా ఆధారంగా మోడల్ పేరును 'gemini-2.0-flash'కి మార్చబడింది.
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    # మోడల్ పేరును 'gemini-1.5-flash-latest'కి మార్చబడింది.
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={GEMINI_API_KEY}"
     print(f"DEBUG: Calling URL: {url}") # డీబగ్గింగ్ కోసం: కాల్ చేస్తున్న URLని ప్రింట్ చేయండి
-    
     
     # అభ్యర్థన హెడర్‌లు
     headers = {"Content-Type": "application/json"}
@@ -66,7 +61,6 @@ def ask_question(q: Question):
     # అభ్యర్థన బాడీ (జెమిని API ఆశించిన ఫార్మాట్‌లో)
     # జెమిని మోడల్‌కు "దోస్త్" పాత్ర మరియు సంభాషణ శైలిని వివరించే సూచనలను చేర్చబడింది.
     # యూజర్ ప్రశ్న ఆధారంగా మాండలికానికి మారడానికి ఉదాహరణలు జోడించబడ్డాయి.
-    # మొదటి 'parts' విభాగం నుండి 'role' తొలగించబడింది, ఎందుకంటే అది సూచనలను కలిగి ఉంది, సంభాషణ చరిత్రను కాదు.
     body = {
         "contents": [
             {
